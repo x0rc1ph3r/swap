@@ -22,7 +22,6 @@ pub mod swap {
         token_b_wanted_amount: u64,
     ) -> Result<()> {
         instructions::make_offer::send_offered_tokens_to_vault(&ctx, token_a_offered_amount)?;
-
         instructions::make_offer::save_offer(ctx, id, token_b_wanted_amount)
     }
 
